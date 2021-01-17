@@ -14,7 +14,7 @@ if __name__ == '__main__':
     game_is_on = True
     while game_is_on:
         screen.update()
-        time.sleep(.05)
+        time.sleep(.05) # The screen delay is displayed after 0.05s and then refresh the screen.
         snake.move()
 
     screen.exitonclick()

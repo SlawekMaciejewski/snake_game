@@ -8,6 +8,13 @@ class Snake():
         :self.segments: list of the snake segments
         """
         self.segments = []
+        self.create_snake()
+
+    def create_snake(self):
+        """
+        It's creating three segments of snake in the home position.
+        :return: None
+        """
         x = 0
         # creating 3 segments snake
         for segment in range(3):
