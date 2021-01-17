@@ -1,12 +1,12 @@
 from turtle import Turtle
 
-
 UP = 90
 DOWN = 270
 LEFT = 180
 RIGHT = 0
 
-class Snake():
+
+class Snake:
     def __init__(self):
         """
         Snake class. It's creating three segments of snake in the home position.
