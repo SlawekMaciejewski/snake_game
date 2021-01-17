@@ -4,8 +4,4 @@ A simple SNAKE game using GUI from Turtle graphics.
 - In this case, I was learning animation and OOP.
 
 ############### Keys #####################
-- "W" -> Forwards
-- "S" -> Backwards
-- "A" -> Counter-Clockwise
-- "D" -> Clockwise
-- "C" -> Clear
+- Control the snake by using the "UP", "DOWN", "LEFT", "RIGHT" cursors
