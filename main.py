@@ -13,13 +13,7 @@ if __name__ == '__main__':
 
     snake = Snake()
     food = Food()
-    sc_text = Scoreboard()
-    sc_text.write("score : ")
-    sc_score = Scoreboard()
-    sc_score.goto(-10, 285)
-
-    score = 0
-    sc_score.write(score)
+    scoreboard = Scoreboard()
 
     screen.listen()
     screen.onkeypress(snake.up, "Up")
@@ -38,6 +32,7 @@ if __name__ == '__main__':
         # snake.head is the first segment of the snake
         if snake.head.distance(food) <= 15:
             food.refresh()
+            scoreboard.increase_score()
             new_segment = Snake()
             # x = snake.tail.xcor()
             # y = snake.tail.ycor()
@@ -47,8 +42,5 @@ if __name__ == '__main__':
             #     new_segment.segments[i].hideturtle()
             # new_segment.head.color("red")
             # new_segment.head.showturtle()
-            sc_score.clear()
-            score = len(snake.segments) - 3
-            sc_score.write(score)
 
     screen.exitonclick()
