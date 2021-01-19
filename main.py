@@ -1,6 +1,7 @@
 from turtle import Screen
 from food import Food
 from snake import Snake
+from scoreboard import Scoreboard
 import time
 
 if __name__ == '__main__':
@@ -12,6 +13,13 @@ if __name__ == '__main__':
 
     snake = Snake()
     food = Food()
+    sc_text = Scoreboard()
+    sc_text.write("score : ")
+    sc_score = Scoreboard()
+    sc_score.goto(-10, 285)
+
+    score = 0
+    sc_score.write(score)
 
     screen.listen()
     screen.onkeypress(snake.up, "Up")
@@ -35,6 +43,12 @@ if __name__ == '__main__':
             # y = snake.tail.ycor()
             # new_segment.head.goto(x-20, y-20)
             snake.segments.append(new_segment.head)
-            print(len(snake.segments))
+            # for i in range(3):
+            #     new_segment.segments[i].hideturtle()
+            # new_segment.head.color("red")
+            # new_segment.head.showturtle()
+            sc_score.clear()
+            score = len(snake.segments) - 3
+            sc_score.write(score)
 
     screen.exitonclick()
