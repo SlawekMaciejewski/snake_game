@@ -22,15 +22,26 @@ class Snake:
         It's creating three segments of snake in the home position.
         :return: None
         """
-        x = 0
         # creating 3 segments snake
+        x = 0
         for segment in range(3):
-            new_segment = Turtle(shape='square')
-            new_segment.color('white')
-            new_segment.penup()
-            new_segment.goto(x=x, y=0)
+            self.add_segment((x, 0))
             x += -20
-            self.segments.append(new_segment)
+
+    def add_segment(self, position):
+        """
+        Add a new segment to the snake
+        :return: None
+        """
+        new_segment = Turtle(shape='square')
+        new_segment.color('white')
+        new_segment.penup()
+        new_segment.goto(position)
+        self.segments.append(new_segment)
+
+    def extend(self):
+
+        pass
 
     def move(self):
         """
