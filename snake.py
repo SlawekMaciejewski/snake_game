@@ -39,6 +39,20 @@ class Snake:
         new_segment.goto(position)
         self.segments.append(new_segment)
 
+    def reset(self):
+        """
+        Clear all of the segments from the snake and create new snake in the starting position.
+        :return: None
+        """
+        # Move the snake segments off the screen.
+        for segment in self.segments:
+            segment.goto(1000, 1000)
+        # Rebuild a new snake.
+        self.segments.clear()
+        self.create_snake()
+        self.head = self.segments[0]
+        # self.tail = self.segments[-1]
+
     def extend(self):
         self.add_segment(self.tail.position())
 
